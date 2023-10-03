@@ -23,23 +23,7 @@ def main():
             if user_input == 1:
                 new_account()
             else:
-                bank = Bank_account(2500, "Andrei Amang")
-                print(bank)
-                while True:
-                    user_input = input("1. Withdraw\n2. Deposit\n")
-                    if user_input == "1" or user_input == "2":
-                        if user_input == "1":
-                            amount = int(input("Amount: "))
-                            bank.withdraw(amount)
-                            print(bank)
-                            break
-                        elif user_input == "2":
-                            amount = int(input("Amount: "))
-                            bank.deposit(amount)
-                            print(bank)
-                            break
-                    else:
-                        pass
+                existing_account()
             break
         else:
             pass
@@ -49,6 +33,25 @@ def new_account():
     amount = int(input("Initial deposit: "))
     bank = Bank_account(amount, name)
     print(bank)
+
+def existing_account():
+    bank = Bank_account(2500, "Andrei Amang")
+    print(bank)
+    while True:
+        user_input = input("1. Withdraw\n2. Deposit\n")
+        if user_input == "1" or user_input == "2":
+            if user_input == "1":
+                amount = int(input("Amount: "))
+                bank.withdraw(amount)
+                print(bank)
+                break
+            elif user_input == "2":
+                amount = int(input("Amount: "))
+                bank.deposit(amount)
+                print(bank)
+                break
+        else:
+            pass
 
 if __name__ == "__main__":
     main()
