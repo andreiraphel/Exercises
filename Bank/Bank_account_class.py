@@ -44,5 +44,11 @@ def main():
         else:
             pass
 
+def new_account():
+    name = input("Name: ")
+    amount = int(input("Initial deposit: "))
+    bank = Bank_account(amount, name)
+    print(bank)
+
 if __name__ == "__main__":
     main()
