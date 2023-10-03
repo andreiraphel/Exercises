@@ -41,12 +41,12 @@ def existing_account():
         user_input = input("1. Withdraw\n2. Deposit\n")
         if user_input == "1" or user_input == "2":
             if user_input == "1":
-                amount = int(input("Amount: "))
+                amount = int(input("Amount: $"))
                 bank.withdraw(amount)
                 print(bank)
                 break
             elif user_input == "2":
-                amount = int(input("Amount: "))
+                amount = int(input("Amount: $"))
                 bank.deposit(amount)
                 print(bank)
                 break
